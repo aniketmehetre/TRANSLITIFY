@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: translitify-app
+    runtime: python
+    plan: free
+    buildCommand: |
+      pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+    # This is the magic part that installs Tesseract on the server!
+    buildPackages:
+      - tesseract-ocr
+      - tesseract-ocr-hin
+      - tesseract-ocr-mar
+      - tesseract-ocr-ben
+      - tesseract-ocr-spa
+      - tesseract-ocr-fra
