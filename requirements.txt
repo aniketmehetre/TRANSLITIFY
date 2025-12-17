@@ -4,3 +4,4 @@ Pillow==10.0.0
 deep-translator==1.11.4
 gTTS==2.3.2
 gunicorn==21.2.0
+opencv-python-headless
