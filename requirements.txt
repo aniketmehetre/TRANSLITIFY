@@ -4,4 +4,6 @@ Pillow==10.0.0
 deep-translator==1.11.4
 gTTS==2.3.2
 gunicorn==21.2.0
-opencv-python-headless
+opencv-python-headless  # Headless is required for servers!
+numpy<2.0.0             # Prevents the metadata build error
+
